@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myFirstApp">
   <head>
     <meta charset="utf-8">
-    <title>Hello!</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>AngularJS</title>
   </head>
   <body>
-    <h1>Hello again!!!</h1>
+    <h1>AngularJS rocks!</h1>
+    <div ng-controller="myFirstController">
+      <input type="text"
+             ng-model="name"
+             ng-blur="upper()">
+      The text your typed is: {{name}}
+    </div>
   </body>
 </html>
