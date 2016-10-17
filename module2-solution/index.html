@@ -12,20 +12,20 @@
     <h3>To Buy:</h3>
     <ul>
       <li ng-repeat="item in toBuy.items">
-        Buy {{ item.quantity }} {{ item.name }}
-        <button ng-click="toBuy.buyItem(item, $index)" class="btn btn-default">Bought</button>
+        Buy {{ item.quantity }} of {{ item.name }}
+        <button ng-click="toBuy.buyItem($index)" class="btn btn-default">Bought</button>
       </li>
     </ul>
-    <div ng-show="!toBuy.items.length">Everything is bought!</div>
+    <div ng-show="toBuy.items.length === 0">Everything is bought!</div>
   </div>
-  <div ng-controller="AlreadyBoughtController as alreadyBought" class="container">
+  <div ng-controller="AlreadyBoughtController as bought" class="container">
     <h3>Already Bought:</h3>
     <ul>
-      <li ng-repeat="item in alreadyBought.items">
-        Bought {{ item.quantity }} {{ item.name }}
+      <li ng-repeat="item in bought.items">
+        Bought {{ item.quantity }} of {{ item.name }}
       </li>
     </ul>
-    <div ng-show="!alreadyBought.items.length">Nothing bought yet.</div>
+    <div ng-show="bought.items.length === 0">Nothing bought yet.</div>
   </div>
 </body>
 </html>
