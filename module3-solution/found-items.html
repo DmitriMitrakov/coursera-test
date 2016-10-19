@@ -1,4 +1,5 @@
 <ul class="list-group">
+  <div class="text-center" ng-if="items.length === 0">Nothing found</div>
   <li ng-repeat="item in items" class="list-group-item">
     <div>
       {{ item.description }}
