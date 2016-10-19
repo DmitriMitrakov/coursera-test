@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="NarrowItDownApp">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <script src="../jquery.min.js"></script>
+    <script src="../angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Module 3 Training</title>
+  </head>
+  <body>
+    <div ng-controller="NarrowItDownController as ctrl" class="container">
+      <h3>Module 3 Solution</h3>
+      <div class="form-group">
+        <input ng-model="ctrl.searchTerm" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <button ng-click="ctrl.getMatchedMenuItems()" class="btn btn-info">Narrow It Down For Me!</button>
+      </div>
+      <found-items items="ctrl.found" on-remove="ctrl.removeItem(index)" />
+    </div>
+  </body>
+</html>
