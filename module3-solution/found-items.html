@@ -2,7 +2,7 @@
   <div class="text-center" ng-if="items.length === 0">Nothing found</div>
   <li ng-repeat="item in items" class="list-group-item">
     <div>
-      {{ item.description }}
+      {{ item.name }} / {{ item.short_name }} / {{ item.description }}
       <span class="input-group-btn text-right">
         <button id="2" ng-click="onRemove({index: $index})" class="btn btn-link">Don't want this one!</button>
       </span>
