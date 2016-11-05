@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- Libraries -->
+  <script src="lib/angular.min.js" defer></script>
+  <script src="lib/angular-ui-router.min.js" defer></script>
+  <!-- Modules -->
+  <script src="src/menuapp/data.module.js" defer></script>
+  <script src="src/menuapp/menuapp.module.js" defer></script>
+  <!-- Artifacts -->
+  <script src="src/menuapp/menudata.service.js" defer></script>
+  <script src="src/menuapp/categories.component.js" defer></script>
+  <script src="src/menuapp/items.component.js" defer></script>
+  <script src="src/menuapp/categories.controller.js" defer></script>
+  <!-- Routes -->
+  <script src="src/routes.js" defer></script>
+
+  <title>Menu App</title>
+</head>
+<body ng-app="MenuApp">
+  <ui-view></ui-view>
+</body>
+</html>
