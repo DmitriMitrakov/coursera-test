@@ -3,10 +3,10 @@
 
   angular.module('MenuApp')
   .component('categories', {
-    templateUrl: 'categories.template.html',
+    templateUrl: 'src/templates/categories.template.html',
     bindings: {
       categories: '<'
     }
   });
-  
+
 })();

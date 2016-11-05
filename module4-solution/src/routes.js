@@ -23,6 +23,16 @@
           return MenuDataService.getAllCategories();
         }]
       }
+    })
+    .state('items', {
+      url: '/items/{category}',
+      templateUrl: 'src/templates/items.template.html',
+      controller: 'ItemsController as ctrl',
+      resolve: {
+        items: ['MenuDataService', '$stateParams', function (MenuDataService, $stateParams) {
+          return MenuDataService.getItemsForCategory($stateParams.category);
+        }]
+      }
     });
 
   };
